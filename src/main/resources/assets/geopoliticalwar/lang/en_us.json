@@ -1,0 +1,15 @@
+{
+  "itemGroup.geopoliticalwar.geopolitical": "Geopolitical Warfare",
+  "block.geopoliticalwar.claim_anchor": "Claim Anchor",
+  "block.geopoliticalwar.siege_anchor": "Siege Anchor",
+  "block.geopoliticalwar.capital_vault": "Capital Vault",
+  "block.geopoliticalwar.minting_press": "Minting Press",
+  "block.geopoliticalwar.estate_board": "Estate Board",
+  "block.geopoliticalwar.capture_beacon": "Capture Beacon",
+  "block.geopoliticalwar.reserve_vault": "Reserve Vault",
+  "item.geopoliticalwar.surveyor": "Surveyor",
+  "item.geopoliticalwar.banknote": "Banknote",
+  "item.geopoliticalwar.coin": "Coin",
+  "container.geopoliticalwar.minting_press": "Minting Press",
+  "container.geopoliticalwar.estate_board": "Estate Board"
+}

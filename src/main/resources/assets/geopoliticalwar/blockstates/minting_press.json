@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "geopoliticalwar:block/minting_press" }
+  }
+}

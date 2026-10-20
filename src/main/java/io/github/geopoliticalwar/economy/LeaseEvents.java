@@ -1,0 +1,26 @@
+package io.github.geopoliticalwar.economy;
+
+import io.github.geopoliticalwar.GeopoliticalWarfare;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+
+@Mod.EventBusSubscriber(modid = GeopoliticalWarfare.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+public final class LeaseEvents {
+    private static int ticks;
+
+    private LeaseEvents() {
+    }
+
+    @SubscribeEvent
+    public static void onServerTick(TickEvent.ServerTickEvent event) {
+        if (event.phase == TickEvent.Phase.END && ++ticks >= 20) {
+            ticks = 0;
+            try {
+                LeaseService.collect(event.getServer());
+            } catch (ArithmeticException overflow) {
+                GeopoliticalWarfare.LOGGER.error("Lease interval is too large", overflow);
+            }
+        }
+    }
+}
